@@ -1,0 +1,34 @@
+name: sqflite_migration
+description: auto generate migration script for sqflite
+version: 0.0.1
+author: Goxiaoy
+homepage:
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  build: '>=0.12.0 <2.0.0'
+  source_gen: ^0.9.0
+  sqflite: ^1.1.6
+  mustache4dart: any
+
+dev_dependencies:
+  build_test: ^0.10.0
+  build_runner: '>=0.9.0 <0.11.0'
+  test: ^1.0.0
+
+# The following section is specific to Flutter.
+flutter:
+  # This section identifies this Flutter project as a plugin project.
+  # The androidPackage and pluginClass identifiers should not ordinarily
+  # be modified. They are used by the tooling to maintain consistency when
+  # adding or updating assets for this project.
+  plugin:
+    androidPackage: com.example.sqflite_migration
+    pluginClass: SqfliteMigrationPlugin
+
+  # For details regarding fonts in packages, see
+  # https://flutter.dev/custom-fonts/#from-packages
