@@ -1,8 +1,8 @@
 name: sqflite_migration
 description: auto generate migration script for sqflite
 version: 0.0.1
-author: Goxiaoy
-homepage:
+author: Goxiaoy <xy1996mail@gmail.com>
+homepage: https://github.com/Goxiaoy/sqflite_migration
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
