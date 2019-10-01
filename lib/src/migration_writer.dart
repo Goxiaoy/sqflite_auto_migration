@@ -10,13 +10,15 @@ class MigrationWriter {
   String write() {
     var sorted = _migrationData.migrations;
     print("detected migrations $sorted");
+    var hasVersion=sorted.length>0;
     return render(tpl, <String, dynamic>{
       'imports': _migrationData.imports
           .toSet()
           .map((p) => <String, String>{'path': p})
           .toList(),
       'migrations': Map.fromEntries(sorted.map((p)=>MapEntry<int,String>(p.key,p.value+"()"))).toString(),
-      'latestVersion': sorted.length>0?sorted.last.key.toString():'null'
+      'latestVersion': hasVersion?sorted.last.key.toString():'null',
+      'hasVersion':hasVersion
     });
   }
 }

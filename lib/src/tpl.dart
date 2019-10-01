@@ -8,6 +8,7 @@ import '{{{path}}}';
 
 final Map<int, MigrationBase> migrations={{{migrations}}};
 
+{{#hasVersion}}
 OpenDatabaseOptions get options => OpenDatabaseOptions(
     //latest version define in the migrations
     version: {{{latestVersion}}},
@@ -32,6 +33,11 @@ OpenDatabaseOptions get options => OpenDatabaseOptions(
       }
       await batch.commit();
     });
+{{/hasVersion}}
+
+{{^hasVersion}}
+OpenDatabaseOptions get options => OpenDatabaseOptions();
+{{/hasVersion}}
 
 
 """;
