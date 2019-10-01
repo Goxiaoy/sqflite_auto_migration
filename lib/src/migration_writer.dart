@@ -16,7 +16,7 @@ class MigrationWriter {
           .map((p) => <String, String>{'path': p})
           .toList(),
       'migrations': Map.fromEntries(sorted.map((p)=>MapEntry<int,String>(p.key,p.value+"()"))).toString(),
-      'latestVersion': sorted.last.key
+      'latestVersion': sorted.length>0?sorted.last.key.toString():'null'
     });
   }
 }
