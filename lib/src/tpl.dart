@@ -16,6 +16,7 @@ OpenDatabaseOptions get options => OpenDatabaseOptions(
       for (var m in migrations.entries) {
         await m.value.up(batch);
       }
+      await batch.commit();
     },
     onUpgrade: (db, oldVersion, newVersion) async {
       var batch = db.batch();
@@ -29,6 +30,7 @@ OpenDatabaseOptions get options => OpenDatabaseOptions(
         if (m.key <= oldVersion && m.key > newVersion)
           await m.value.down(batch);
       }
+      await batch.commit();
     });
 
 
