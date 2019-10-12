@@ -1,25 +1,25 @@
 targets:
   $default: 
     builders: 
-      sqflite_migration|migrationDataBuilder:
+      sqflite_auto_migration|migrationDataBuilder:
         enabled: true
         generate_for:
           exclude: ['**.migration.dart']
-      sqflite_migration|migrationFunctionBuilder:
+      sqflite_auto_migration|migrationFunctionBuilder:
         enabled: true
         generate_for:
           exclude: ['**.migration.dart']
 builders:
   migrationFunctionBuilder:
-    import: "package:sqflite_migration/builder.dart"
+    import: "package:sqflite_auto_migration/builder.dart"
     builder_factories: ["migrationFunctionBuilder"]
     build_extensions: {".dart": ["generated/migration_function.dart"]}
     auto_apply: root_package
     build_to: source
     runs_before: []
   migrationDataBuilder:
-    import: "package:sqflite_migration/builder.dart"
+    import: "package:sqflite_auto_migration/builder.dart"
     builder_factories: ["migrationDataBuilder"]
     build_extensions: {".dart": [".empty.dart"]}
     auto_apply: root_package
-    runs_before: [sqflite_migration|migrationFunctionBuilder]
+    runs_before: [sqflite_auto_migration|migrationFunctionBuilder]

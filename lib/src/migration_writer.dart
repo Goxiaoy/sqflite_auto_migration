@@ -1,4 +1,4 @@
-import 'package:sqflite_migration/src/migration_data.dart';
+import 'package:sqflite_auto_migration/src/migration_data.dart';
 import 'tpl.dart';
 import 'package:mustache4dart/mustache4dart.dart';
 

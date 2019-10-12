@@ -1,4 +1,4 @@
-name: sqflite_migration_example
+name: sqflite_auto_migration_example
 description: sqflite migration example project.
 
 # The following defines the version and build number for your application.
@@ -16,7 +16,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  sqflite_migration:
+  sqflite_auto_migration:
     path: ../
 
 dev_dependencies:

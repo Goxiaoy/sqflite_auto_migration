@@ -1,4 +1,4 @@
-# sqflite_migration
+# sqflite_auto_migration
 
 use code-gen to generate sqflite OpenDatabaseOptions
 
@@ -10,7 +10,7 @@ Add to you pubspec.yaml
 
 ```
 dependencies:
-    sqflite_migration:
+    sqflite_auto_migration:
 
 dev_dependencies:
     build_runner: '>=0.9.1'
@@ -21,7 +21,7 @@ dev_dependencies:
 Write a migration class like
 
 ```
-import 'package:sqflite_migration/sqflite_migration.dart';
+import 'package:sqflite_auto_migration/sqflite_auto_migration.dart';
 import 'package:sqflite/sqflite.dart';
 
 @MigrationVersion(1)

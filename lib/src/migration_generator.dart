@@ -1,7 +1,7 @@
 import 'package:source_gen/source_gen.dart';
 import 'package:build/build.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:sqflite_migration/src/migration_data.dart';
+import 'package:sqflite_auto_migration/src/migration_data.dart';
 import 'migration_version.dart';
 
 class MigrationDataGenerator extends GeneratorForAnnotation<MigrationVersion> {
