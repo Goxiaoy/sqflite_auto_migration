@@ -15,4 +15,3 @@ class MigrationDataGenerator extends GeneratorForAnnotation<MigrationVersion> {
     return null;
   }
 }
-

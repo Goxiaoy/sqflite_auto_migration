@@ -6,13 +6,12 @@ import 'migration_writer.dart';
 import 'migration_generator.dart';
 
 class MiragtionFunctionBuilder implements Builder {
-
   static final _allFilesInLib = new Glob('lib/**');
 
   static AssetId _allFileOutput(BuildStep buildStep) {
     return new AssetId(
       buildStep.inputId.package,
-      p.join('lib', 'generated','migration_function.dart'),
+      p.join('lib', 'generated', 'migration_function.dart'),
     );
   }
 
@@ -31,6 +30,7 @@ class MiragtionFunctionBuilder implements Builder {
     }
     final output = _allFileOutput(buildStep);
     //get migration
-    return buildStep.writeAsString(output, MigrationWriter(MigrationDataGenerator.migrationData).write());
+    return buildStep.writeAsString(
+        output, MigrationWriter(MigrationDataGenerator.migrationData).write());
   }
 }

@@ -1,10 +1,14 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_auto_migration/sqflite_auto_migration.dart';
 
-import 'package:sqflite_auto_migration_example/test_migration_three.dart';
 import 'package:sqflite_auto_migration_example/test_migration.dart';
+import 'package:sqflite_auto_migration_example/test_migration_three.dart';
 
-final Map<int, MigrationBase> migrations={1: TestMigrationOne(), 2: TestMigrationTwo(), 3: TestMigrationThree()};
+final Map<int, MigrationBase> migrations = {
+  1: TestMigrationOne(),
+  2: TestMigrationTwo(),
+  3: TestMigrationThree()
+};
 
 OpenDatabaseOptions get options => OpenDatabaseOptions(
     //latest version define in the migrations
@@ -30,6 +34,3 @@ OpenDatabaseOptions get options => OpenDatabaseOptions(
       }
       await batch.commit();
     });
-
-
-

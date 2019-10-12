@@ -1,4 +1,4 @@
-const String tpl="""
+const String tpl = """
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_auto_migration/sqflite_auto_migration.dart';
 
@@ -6,7 +6,9 @@ import 'package:sqflite_auto_migration/sqflite_auto_migration.dart';
 import '{{{path}}}';
 {{/imports}}
 
-final Map<int, MigrationBase> migrations={{{migrations}}};
+final Map<int, MigrationBase> migrations={
+  {{migrations}}
+};
 
 {{#hasVersion}}
 OpenDatabaseOptions get options => OpenDatabaseOptions(
@@ -34,10 +36,7 @@ OpenDatabaseOptions get options => OpenDatabaseOptions(
       await batch.commit();
     });
 {{/hasVersion}}
-
 {{^hasVersion}}
 OpenDatabaseOptions get options => OpenDatabaseOptions();
 {{/hasVersion}}
-
-
 """;
