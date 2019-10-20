@@ -6,7 +6,7 @@ import 'package:sqflite_auto_migration/sqflite_auto_migration.dart';
 import '{{{path}}}';
 {{/imports}}
 
-final Map<int, MigrationBase> migrations={
+final Map<int, MigrationBase> migrations = {
   {{migrations}}
 };
 
