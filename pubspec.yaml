@@ -1,8 +1,8 @@
 name: sqflite_auto_migration
 description: Use source_gen and build_runner to auto generate migration function for sqlite by using override migration class and annotated with version number
-version: 1.0.1
+version: 1.0.2
 author: Goxiaoy <xy1996mail@gmail.com>
-homepage: https://github.com/Goxiaoy/sqflite_migration
+homepage: https://github.com/Goxiaoy/sqflite_auto_migration
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
